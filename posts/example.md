@@ -1,14 +1,14 @@
 ---
 title: Example article title
 published: false
-description: A simple test article
+description: A simple test article (updated)
 tags: 'productivity, beginners, test'
 cover_image: ./assets/cat.jpg
 canonical_url: null
 id: 1810973
 ---
 
-Some random text with a [link](https://code.visualstudio.com).
+*** updated *** Some random text with a [link](https://code.visualstudio.com).
 
 ## Serious title
 
