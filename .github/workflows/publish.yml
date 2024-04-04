@@ -22,10 +22,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 14
+    - uses: actions/checkout@v3
     - name: Publish articles on dev.to
       uses: sinedied/publish-devto@v2
       id: publish_devto
@@ -46,15 +43,4 @@ jobs:
         # See https://www.conventionalcommits.org. 
         conventional_commits: true
         # (Optional) Do not make actual changes on dev.to if it's a pull request.
-        dry_run: ${{ github.event_name == 'pull_request' }}
-
-    # (Optional) Add comment with dev.to changes if it's a pull request.
-    - uses: actions-ecosystem/action-create-comment@v1
-      if: ${{ github.event_name == 'pull_request' }}
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        body: |
-          Changes result:
-          ```
-          ${{ steps.publish_devto.outputs.result_summary }}
-          ```
+        dry_run: false
