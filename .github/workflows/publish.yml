@@ -22,9 +22,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Publish articles on dev.to
-      uses: sinedied/publish-devto@v2
+      uses: sinedied/publish-devto@v3
       id: publish_devto
       with:
         # Your dev.to personal API key to publish and update articles.
